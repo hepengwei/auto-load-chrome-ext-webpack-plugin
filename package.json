@@ -1,6 +1,6 @@
 {
   "name": "auto-load-chrome-ext-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Webpack plugin that automatically loads packaged Chrome Extension into the browser.",
   "main": "index.js",
   "scripts": {
