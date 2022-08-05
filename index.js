@@ -52,6 +52,9 @@ class AutoRunChromeExtPlugin {
 
                   // 打开Chrome浏览器的扩展管理页面
                   await driver.get("chrome://extensions/");
+                  const window = await driver.manage().window();
+                  await window.maximize();
+                  const rect = await window.getRect();
                   // 找到页面中开发者模式的按钮
                   const a = await driver
                     .findElement(By.css("extensions-manager"))
@@ -88,7 +91,13 @@ class AutoRunChromeExtPlugin {
                               const exec = require("child_process").execFile;
                               const child = exec(
                                 this.autoClickSelectLocation,
-                                [this.targetDir],
+                                [
+                                  this.targetDir,
+                                  rect.x,
+                                  rect.y,
+                                  rect.width,
+                                  rect.height,
+                                ],
                                 {},
                                 (error, stdout, stderr) => {
                                   if (error) return console.error(error);
