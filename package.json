@@ -1,19 +1,16 @@
 {
   "name": "auto-load-chrome-ext-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Webpack plugin that automatically loads packaged Chrome Extension into the browser.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "webpack",
     "plugin",
     "webpack plugin",
     "Chrome Extension"
   ],
+  "license": "MIT",
   "author": "River",
-  "license": "ISC",
   "dependencies": {
     "fs-extra": "^10.1.0",
     "selenium-webdriver": "^4.3.1"
